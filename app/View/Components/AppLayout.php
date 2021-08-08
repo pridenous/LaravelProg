@@ -12,6 +12,7 @@ class AppLayout extends Component
      * @return void
      */
     public $title;
+    public $styles;
     public function __construct($title = null)
     {
         $this->title = $title ? $title : 'nousless';

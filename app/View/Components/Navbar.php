@@ -27,7 +27,8 @@ class Navbar extends Component
             'Home' => '/',
             'Profile' => '/profile',
             'About' => '/about',
-            'Blog' => '/blog'
+            'Blog' => '/blog',
+            'Contact' => '/contact'
         ];
         return view('components.navbar', compact('navigations'));
     }
