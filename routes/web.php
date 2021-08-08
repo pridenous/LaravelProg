@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileInformationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,9 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 
-Route::get('profile/{name}', function($name) {
-    return view('profile', ['name' => $name]);
-});
+// Route::get('profile/{name}', function($name) {
+//     return view('profile', ['name' => $name]);
+// });
+
+Route::get('profile/{identifier}', [ProfileInformationController::class, '__invoke']);
 
 Route::view('blog', 'blog');
 Route::view('about', 'about');
